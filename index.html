@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Tienda online desarrollada con HTML, CSS, Bootstrap y JavaScript consumiendo una API REST.">
+    <meta name="keywords" content="ecommerce, tienda, javascript, bootstrap, html, css">
+    <meta name="author" content="Tu Nombre">
+
+    <title>Mi E-Commerce</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+
+                <a class="navbar-brand fw-bold" href="#">
+                    Mi E-Commerce
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menu">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse" id="menu">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#inicio">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#productos">Productos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#reseñas">Reseñas</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- HERO -->
+        <section id="inicio" class="hero">
+
+            <div class="container text-center">
+
+                <h1>Bienvenido a Mi Tienda Online</h1>
+
+                <p>
+                    Los mejores productos al mejor precio.
+                </p>
+
+                <a href="#productos" class="btn btn-primary btn-lg">
+                    Ver Productos
+                </a>
+
+            </div>
+
+        </section>
+
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- PRODUCTOS -->
+        <section id="productos" class="container py-5">
+
+            <h2 class="text-center mb-5">
+                Productos
+            </h2>
+
+            <div id="productosContainer" class="productos">
+
+                <!-- JS -->
+
+            </div>
+
+        </section>
+
+        <!-- RESEÑAS -->
+        <section id="reseñas" class="container py-5">
+
+            <h2 class="text-center mb-5">
+                Reseñas
+            </h2>
+
+            <div class="reseñas-grid">
+
+                <div class="reseña">
+
+                    <h4>★★★★★</h4>
+
+                    <p>
+                        Excelente atención y envío muy rápido.
+                    </p>
+
+                    <strong>Juan</strong>
+
+                </div>
+
+                <div class="reseña">
+
+                    <h4>★★★★★</h4>
+
+                    <p>
+                        Muy buena calidad de productos.
+                    </p>
+
+                    <strong>María</strong>
+
+                </div>
+
+                <div class="reseña">
+
+                    <h4>★★★★☆</h4>
+
+                    <p>
+                        Volvería a comprar sin dudas.
+                    </p>
+
+                    <strong>Lucas</strong>
+
+                </div>
+
+                <div class="reseña">
+
+                    <h4>★★★★★</h4>
+
+                    <p>
+                        Todo perfecto.
+                    </p>
+
+                    <strong>Camila</strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CARRITO -->
+        <section class="container py-5">
+
+            <h2 class="text-center">
+                Carrito
+            </h2>
+
+            <div class="table-responsive">
+
+                <table class="table table-striped mt-4">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Producto</th>
+
+                            <th>Precio</th>
+
+                            <th>Cantidad</th>
+
+                            <th>Subtotal</th>
+
+                            <th></th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="carrito">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <h3 class="text-end">
+
+                Total: $
+
+                <span id="total">
+
+                    0
+
+                </span>
+
+            </h3>
+
+        </section>
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="container py-5">
+
+            <h2 class="text-center mb-4">
+                Contacto
+            </h2>
+
+            <form id="formulario"
+                action="https://formspree.io/f/xxxxxxxx"
+                method="POST">
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Nombre
+                    </label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        name="nombre"
+                        id="nombre"
+                        required>
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Correo
+                    </label>
+
+                    <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        id="email"
+                        required>
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Mensaje
+                    </label>
+
+                    <textarea
+                        class="form-control"
+                        rows="5"
+                        name="mensaje"
+                        id="mensaje"
+                        required>
+                    </textarea>
+
+                </div>
+
+                <button class="btn btn-success">
+                    Enviar
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="container text-center">
+
+            <p>
+
+                © 2026 Mi E-Commerce | Proyecto Final JavaScript
+
+            </p>
+
+            <p>
+
+                🛒 Productos en carrito:
+                <span id="contadorCarrito">
+
+                    0
+
+                </span>
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
